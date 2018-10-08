@@ -46498,7 +46498,6 @@ var AuthorPage = React.createClass({displayName: "AuthorPage",
 });
 
 module.exports = AuthorPage;
-
 },{"../../stores/authorStore":227,"./authorList":214,"react":205,"react-router":35}],216:[function(require,module,exports){
 "use strict";
 
@@ -46783,7 +46782,10 @@ var InitializeActions = require('./actions/initializeActions');
 InitializeActions.initApp();
 
 Router.run(routes, function(Handler) {
-	React.render(React.createElement(Handler, null), document.getElementById('app'));
+	React.render(
+    React.createElement(Handler, null), 
+    document.getElementById('app')
+  );
 });
 },{"./actions/initializeActions":208,"./routes":226,"react":205,"react-router":35}],226:[function(require,module,exports){
 "use strict";
@@ -46875,5 +46877,4 @@ Dispatcher.register(function(action) {
 });
 
 module.exports = AuthorStore;
-
 },{"../constants/actionTypes":223,"../dispatcher/appDispatcher":224,"events":2,"lodash":8,"object-assign":9}]},{},[225]);
